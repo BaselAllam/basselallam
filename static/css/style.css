@@ -198,7 +198,7 @@ header .intro-text {
 /* Gallery Section */
 #gallery {
 	padding: 120px 0;
-	background: #f6f6f6;
+	background: #fffefe;
 }
 /* Portfolio Section */
 #portfolio {
@@ -328,6 +328,40 @@ ol.type li a:hover {
 	padding: 5px;
 	color: #E87E04;
 }
+/* Testimonials Section */
+#testimonials {
+	background: white;
+	padding: 20px;
+}
+
+.testimonial-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	list-style-type: none;
+}
+
+.review-border-box {
+    border-width: 1px;
+    border-style: groove;
+    border-radius: 10px;
+    border-color: black;
+    padding: 15px;
+	margin: 10px;
+}
+
+.review-cart {
+    height: 150px;
+    width: 350px;
+    /* margin: 10px; */
+}
+
+.review-text-head {
+    text-align: left;
+}
+
+
 /* Contact Section */
 #contact {
 	padding: 120px 0 60px 0;

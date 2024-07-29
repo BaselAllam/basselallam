@@ -12,8 +12,8 @@
     ================================================== -->
 <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
-<link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
-<link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+<link rel="android-chrome" sizes="512*512" href="{% static 'img/android-chrome-512x512.png' %}">
+<link rel="android-chrome" sizes="192*192" href="{% static 'img/android-chrome-192x192.png' %}">
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
@@ -25,7 +25,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/nivo-lightbox.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/default.css' %}">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+{% comment %} <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script> {% endcomment %}
 
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -84,6 +84,7 @@
     </div>
   </div>
 </div>
+<!-- Portfolio Section -->
 <div id="portfolio">
   <div class="container">
     <div class="section-title text-center center">
@@ -95,129 +96,60 @@
         <li>
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".graphic">Graphic Design</a></li>
+            <li><a href="#" data-filter=".graphic">Web Dev</a></li>
             <li><a href="#" data-filter=".illustration">Mobile Dev</a></li>
-            <li><a href="#" data-filter=".photography">Web Dev</a></li>
           </ol>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
     <div class="row">
+      {% for i in portfolio %}
       <div class="portfolio-items">
         <div class="col-sm-6 col-md-3 col-lg-3 graphic">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/01-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="{{ i.portfolio_image }}" title="{{ i.portfolio_title }}" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Project Title</h4>
+                <h4>{{ i.portfolio_title }}</h4>
               </div>
-              <img src="{% static 'img/portfolio/01-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 illustration">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/02-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/02-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/03-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/03-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/04-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/04-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 illustration">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/05-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/05-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/06-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/06-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/07-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/07-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/08-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/08-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 illustration">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/09-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/09-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/10-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/10-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/11-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/11-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/12-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/12-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src=" {{ i.portfolio_image }} " class="img-responsive" alt="Project Title"> </a> </div>
+            </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
-<!-- Portfolio Section -->
+{% comment %} <!-- Testimonial Section -->
+<div id= "testimonials">
+  <div class="container">
+    <div class="section-title text-center center">
+      <br> </br>
+      <h2>Testimonials</h2>
+      <hr>
+    </div>
+    <div>
+      <ul class="testimonial-row">
+        {% for i in count %}
+        <li>
+          <div class="review-border-box">
+              <div class="review-cart">
+                  <div class="review-text-head">
+                       the best instructor i have ever met, i was need a monitor who's can help me achive my
+                       career goals and he provided all things needed and was helpful
+                  </div>
+                  <h3> Client Name </h3>
+                  <h4> ⭐️⭐️⭐️⭐️⭐️ </h4>
+              </div>
+          </div>
+      </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div> {% endcomment %}
+<!-- Gallery Section -->
 <div id="gallery">
   <div class="container">
     <div class="section-title text-center center">
@@ -225,128 +157,21 @@
       <hr>
     </div>
     <div class="categories">
-      <ul class="cat">
-        <li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".graphic">Graphic Design</a></li>
-            <li><a href="#" data-filter=".illustration">Mobile Dev</a></li>
-            <li><a href="#" data-filter=".photography">Web Dev</a></li>
-          </ol>
-        </li>
-      </ul>
       <div class="clearfix"></div>
     </div>
     <div class="row">
-      <div class="portfolio-items">
+      {% for i in gallery %}
+      <div class="portfolio-items isotope">
         <div class="col-sm-6 col-md-3 col-lg-3 graphic">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/01-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="{{ i.image.url }}" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Project Title</h4>
+                <h4>With heros</h4>
               </div>
-              <img src="{% static 'img/portfolio/01-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="{{ i.image.url }}" class="img-responsive"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 illustration">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/02-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/02-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/03-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/03-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/04-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/04-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 illustration">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/05-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/05-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/06-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/06-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/07-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/07-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/08-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/08-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 illustration">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/09-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/09-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/10-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/10-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 photography">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/11-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/11-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{% static 'img/portfolio/12-large.jpg' %}" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Project Title</h4>
-              </div>
-              <img src="{% static 'img/portfolio/12-small.jpg' %}" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -383,10 +208,9 @@
       </form>
       <div class="social">
         <ul>
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+          <li><a href="https://github.com/BaselAllam"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/bassel-allam-012b65b3/"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://www.youtube.com/@bassel_allam"><i class="fa fa-youtube"></i></a></li>
         </ul>
       </div>
     </div>
