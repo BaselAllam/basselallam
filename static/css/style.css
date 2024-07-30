@@ -195,10 +195,43 @@ header .intro-text {
 	margin-bottom: 30px;
 	line-height: 22px;
 }
-/* Gallery Section */
-#gallery {
-	padding: 120px 0;
-	background: #fffefe;
+/* courses Section */
+#courses-section {
+	background: red;
+	list-style-type: none;
+	display: flex;
+}
+
+.course-item {
+    height: 450px;
+    width: 430px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: groove;
+    border-color: black;
+    margin: 20px;
+}
+
+
+.course-img {
+    width: 430px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.course-head-txt {
+    text-align: start;
+}
+
+.course-data {
+    padding: 20px;
+}
+
+.course-data-bottom {
+    list-style-type: none;
+    display: flex;
+	align-content: center;
+	align-items: center;
 }
 /* Portfolio Section */
 #portfolio {

@@ -24,6 +24,7 @@
 <link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/nivo-lightbox.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/default.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 {% comment %} <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script> {% endcomment %}
 
@@ -39,7 +40,9 @@
           <h1>Bassel Allam</h1>
           <hr>
           <p>Technical Lead • Instructor • In Love with Learning</p>
-          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a>
+          <a href="#" class="btn btn-default btn-lg page-scroll">Verify Certification</a>
+        </div>
       </div>
     </div>
   </div>
@@ -58,6 +61,7 @@
           <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
           <li class="hidden"> <a href="#page-top"></a> </li>
           <li> <a class="page-scroll" href="#about">About</a> </li>
+          <li> <a class="page-scroll" href="#courses">Courses</a> </li>
           <li> <a class="page-scroll" href="#portfolio">Portfolio</a> </li>
           <li> <a class="page-scroll" href="#gallery">Gallery</a> </li>
           <li> <a class="page-scroll" href="#contact">Contact</a> </li>
@@ -84,6 +88,59 @@
     </div>
   </div>
 </div>
+
+<!-- Courses Section -->
+<div id="courses">
+  <div class="container">
+    <div class="section-title text-center center">
+      <br></br>
+      <h2>Courses</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div>
+        <div class="courses-section">
+      {% for i in courses %}
+      <div class="course-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJzpEkv-vlwrVppb-PQuWArI1sXR9vAYAwNg&s" class="course-img">
+        <div class="course-data">
+            <h4> Mobile Apps </h4>
+            <h1 class="course-head-txt"> Flutter Mobile App Course </h1>
+            <div class="course-data-bottom">
+            <ul class="course-data-bottom">
+                <li>
+                    <i class="material-icons" style="color:indigo">watch</i>
+                </li>
+                <li>
+                    <h4 style="color:indigo">70 Hours</h4> 
+                </li>
+            </ul>
+            <ul class="course-data-bottom">
+                <li>
+                    <i class="material-icons" style="color:indigo">money</i>
+                </li>
+                <li>
+                    <h4 style="color:indigo">700 USD</h4> 
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+        {% comment %} <div class="col-sm-6 col-md-3 col-lg-3 graphic">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="{{ i.course_image.url }}" data-lightbox-gallery="gallery1">
+              <div class="hover-text">
+                <h4>{{ i.course_title }}</h4>
+              </div>
+              <img src="{{ i.course_image.url }}" class="img-responsive"> </a> </div>
+          </div>
+        </div> {% endcomment %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<br></br>
 <!-- Portfolio Section -->
 <div id="portfolio">
   <div class="container">
@@ -95,31 +152,32 @@
       <ul class="cat">
         <li>
           <ol class="type">
-            <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".graphic">Web Dev</a></li>
-            <li><a href="#" data-filter=".illustration">Mobile Dev</a></li>
+            <li><a href="#" data-filter="*" class="active">Mobile Dev</a></li>
+            <li><a href="#" data-filter=".web">Web Dev</a></li>
+            <li><a href="#" data-filter=".mobile">ERP</a></li>
+            <li><a href="#" data-filter=".mobile">Graphic Design</a></li>
+            <li><a href="#" data-filter=".mobile">Multi Serivce</a></li>
           </ol>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
     <div class="row">
-      {% for i in portfolio %}
       <div class="portfolio-items">
+      {% for i in portfolio %}
         <div class="col-sm-6 col-md-3 col-lg-3 graphic">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ i.portfolio_image }}" title="{{ i.portfolio_title }}" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="{{ i.portfolio_image.url }}" title="{{ i.portfolio_description }}" data-lightbox-gallery="gallery1">
               <div class="hover-text">
                 <h4>{{ i.portfolio_title }}</h4>
               </div>
-              <img src=" {{ i.portfolio_image }} " class="img-responsive" alt="Project Title"> </a> </div>
+              <img src=" {{ i.portfolio_image.url }} " class="img-responsive" alt="Project Title"> </a> </div>
             </div>
           </div>
-        </div>
-      </div>
       {% endfor %}
     </div>
   </div>
+</div>
 </div>
 {% comment %} <!-- Testimonial Section -->
 <div id= "testimonials">
@@ -153,12 +211,13 @@
 <div id="gallery">
   <div class="container">
     <div class="section-title text-center center">
+      <br></br>
       <h2>Gallery</h2>
       <hr>
     </div>
     <div class="row">
+      <div>
       {% for i in gallery %}
-      <div class="portfolio-items isotope">
         <div class="col-sm-6 col-md-3 col-lg-3 graphic">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="{{ i.image.url }}" data-lightbox-gallery="gallery1">
@@ -168,8 +227,7 @@
               <img src="{{ i.image.url }}" class="img-responsive"> </a> </div>
           </div>
         </div>
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
