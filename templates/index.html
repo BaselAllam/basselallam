@@ -98,25 +98,24 @@
       <hr>
     </div>
     <div class="row">
-      <div>
-        <div class="courses-section">
+      <div class="courses-section">
       {% for i in courses %}
       <div class="course-item">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJzpEkv-vlwrVppb-PQuWArI1sXR9vAYAwNg&s" class="course-img">
+        <img src="{{ i.course_image.url }}" class="course-img">
         <div class="course-data">
-            <h4> Mobile Apps </h4>
-            <h1 class="course-head-txt"> Flutter Mobile App Course </h1>
+            <h5> {{ i.course_category }} </h5>
+            <h2 class="course-head-txt"> {{ i.course_title }} </h2>
             <div class="course-data-bottom">
             <ul class="course-data-bottom">
-                <li>
+                <li class="course-li">
                     <i class="material-icons" style="color:indigo">watch</i>
                 </li>
                 <li>
-                    <h4 style="color:indigo">70 Hours</h4> 
+                    <h4 style="color:indigo">{{ i.course_hours }} Hours</h4> 
                 </li>
             </ul>
             <ul class="course-data-bottom">
-                <li>
+                <li  class="course-li">
                     <i class="material-icons" style="color:indigo">money</i>
                 </li>
                 <li>
@@ -124,7 +123,7 @@
                 </li>
             </ul>
         </div>
-        </div>
+      </div>
     </div>
         {% comment %} <div class="col-sm-6 col-md-3 col-lg-3 graphic">
           <div class="portfolio-item">
@@ -136,7 +135,7 @@
           </div>
         </div> {% endcomment %}
       {% endfor %}
-      </div>
+    </div>
     </div>
   </div>
 </div>

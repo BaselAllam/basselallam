@@ -196,26 +196,26 @@ header .intro-text {
 	line-height: 22px;
 }
 /* courses Section */
-#courses-section {
-	background: red;
+.courses-section {
 	list-style-type: none;
 	display: flex;
 }
 
 .course-item {
     height: 450px;
-    width: 430px;
+    width: 650px;
     border-radius: 10px;
     border-width: 1px;
     border-style: groove;
     border-color: black;
     margin: 20px;
+	background-color: transparent;
 }
 
 
 .course-img {
-    width: 430px;
-    height: 200px;
+    width: 100%;
+    height: 60%;
     border-radius: 10px;
 }
 
@@ -232,6 +232,10 @@ header .intro-text {
     display: flex;
 	align-content: center;
 	align-items: center;
+}
+
+.course-li {
+	margin-left: 10px;
 }
 /* Portfolio Section */
 #portfolio {
