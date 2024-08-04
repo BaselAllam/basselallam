@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(x9q7x=e-d+*1ucd3b@x)t-@9%n4csb5!8gfoa-$*%xi3mj&hg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['basselallam.com']
+ALLOWED_HOSTS = ['basselallam.com', 'www.basselallam.com']
 
 
 # Application definition
@@ -84,9 +84,15 @@ WSGI_APPLICATION = 'basselallam.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backend.mysql',
+        'NAME': 'basspkuy_badb',
+        'USER': 'basspkuy_basselallam',
+        'PASSWORD': '@Basselallam1',
     }
 }
 
