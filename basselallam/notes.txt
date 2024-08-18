@@ -1,0 +1,6 @@
+
+- add services to site
+- finalize contact section
+- finalize courses section
+- finalize client reviews section
+- add my team section

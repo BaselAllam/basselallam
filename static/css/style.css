@@ -402,6 +402,21 @@ ol.type li a:hover {
 /* Contact Section */
 #contact {
 	padding: 120px 0 60px 0;
+	background-color: #f6f6f6;
+}
+#contact-box {
+	border-radius: 10px;
+	border-width: 1px;
+	border-color: #555;
+	list-style-type: none;
+	display: flex;
+	background-color: white;
+    border-style: groove;
+}
+#contact-li {
+	display: inline-block;
+	display: flex;
+    list-style-type: none;
 }
 #contact h3 {
 	padding-top: 20px;

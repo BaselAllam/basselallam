@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-(x9q7x=e-d+*1ucd3b@x)t-@9%n4csb5!8gfoa-$*%xi3mj&hg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['basselallam.com', 'www.basselallam.com']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['basselallam.com', 'www.basselallam.com']
 
 
 # Application definition
@@ -84,21 +84,21 @@ WSGI_APPLICATION = 'basselallam.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-import pymysql
+# import pymysql
 
-pymysql.install_as_MySQLdb()
+# pymysql.install_as_MySQLdb()
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'basspkuy_badb',
-        'USER': 'basspkuy_basselallam',
-        'PASSWORD': '@Basselallam1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'basspkuy_badb',
+    #     'USER': 'basspkuy_basselallam',
+    #     'PASSWORD': '@Basselallam1',
+    # }
 }
 
 
@@ -140,10 +140,10 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, "static/"),
-# )
+# STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static/"),
+)
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
