@@ -1,296 +1,630 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bassel Allam</title>
-<meta name="description" content="I'm a Technical Lead and Instructor with 5 years of experience in software development. I have hands-on experience efficiently coding websites and mobile applications using modern programming language, Python, Django, Dart, Flutter , PostgreSQL other using graphics tools, etc.">
-<meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Bassel Allam</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Tech Lead | Software Instructor | 5+ Years Experience in Python, Django, Flutter & More | Helping Developers Build Skills & Businesses Thrive" name="keywords">
+    <meta content="Tech Lead | Software Instructor | 5+ Years Experience in Python, Django, Flutter & More | Helping Developers Build Skills & Businesses Thrive" name="description">
 
-<!-- Favicons
-    ================================================== -->
-<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
-<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
-<link rel="android-chrome" sizes="512*512" href="{% static 'img/android-chrome-512x512.png' %}">
-<link rel="android-chrome" sizes="192*192" href="{% static 'img/android-chrome-192x192.png' %}">
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico'%}" rel="icon">
 
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css"  href="{% static 'css/bootstrap.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
 
-<!-- Stylesheet
-    ================================================== -->
-<link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/nivo-lightbox.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/default.css' %}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-{% comment %} <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script> {% endcomment %}
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css'%}" rel="stylesheet">
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-<!-- Header -->
-<header id="header">
-  <div class="intro">
-    <div class="container">
-      <div class="row">
-        <div class="intro-text">
-          <h1>Bassel Allam</h1>
-          <hr>
-          <p>Technical Lead • Instructor • In Love with Learning</p>
-          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a>
-          <a href="#" class="btn btn-default btn-lg page-scroll">Verify Certification</a>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-      </div>
     </div>
-  </div>
-</header>
-<!-- Navigation -->
-<div id="nav">
-  <nav class="navbar navbar-custom">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-      </div>
-      
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-          <li class="hidden"> <a href="#page-top"></a> </li>
-          <li> <a class="page-scroll" href="#about">About</a> </li>
-          <li> <a class="page-scroll" href="#courses">Courses</a> </li>
-          <li> <a class="page-scroll" href="#portfolio">Portfolio</a> </li>
-          <li> <a class="page-scroll" href="#gallery">Gallery</a> </li>
-          <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-<!-- About Section -->
-<div id="about">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>About Me</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-md-12 text-center"><img src="{% static 'img/pp.jpg' %}" class="img-responsive"></div>
-      <div class="col-md-8 col-md-offset-2">
-        <div class="about-text">
-          <p>I'm a Technical Lead and Instructor with +5 years of experience in software development.</p>
-          <p>I have hands-on experience efficiently coding websites and mobile applications using modern programming language, Python, Django, Dart, Flutter , PostgreSQL other using graphics tools, etc.</p>
-          <a href="#portfolio" class="btn btn-default btn-lg page-scroll">My Portfolio</a> </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <!-- Spinner End -->
 
-<!-- Courses Section -->
-<div id="courses">
-  <div class="container">
-    <div class="section-title text-center center">
-      <br></br>
-      <h2>Courses</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="courses-section">
-      {% for i in courses %}
-      <div class="course-item">
-        <img src="{{ i.course_image.url }}" class="course-img">
-        <div class="course-data">
-            <h5> {{ i.course_category }} </h5>
-            <h2> <a href="{{ i.course_link }}" class="course-head-txt"> {{ i.course_title }} </a> </h2>
-            <div class="course-data-bottom">
-            <ul class="course-data-bottom">
-                <li class="course-li">
-                    <i class="material-icons" style="color:indigo">watch</i>
-                </li>
-                <li>
-                    <h4 style="color:indigo">{{ i.course_hours }} Hours</h4> 
-                </li>
-            </ul>
-            <ul class="course-data-bottom">
-                <li  class="course-li">
-                    <i class="material-icons" style="color:indigo">money</i>
-                </li>
-                <li>
-                    <h4 style="color:indigo">700 USD</h4> 
-                </li>
-            </ul>
-        </div>
-      </div>
-    </div>
-      {% endfor %}
-    </div>
-    </div>
-  </div>
-</div>
-<br></br>
-<!-- Portfolio Section -->
-<div id="portfolio">
-  <div class="container">
-    <div class="section-title text-center center">
-      <h2>Portfolio</h2>
-      <hr>
-    </div>
-    <div class="categories">
-      <ul class="cat">
-        <li>
-          <ol class="type">
-            <li><a href="#" data-filter="*" class="active">Mobile Dev</a></li>
-            <li><a href="#" data-filter=".web">Web Dev</a></li>
-            <li><a href="#" data-filter=".mobile">ERP</a></li>
-            <li><a href="#" data-filter=".mobile">Graphic Design</a></li>
-            <li><a href="#" data-filter=".mobile">Multi Serivce</a></li>
-          </ol>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
-    </div>
-    <div class="row">
-      <div class="portfolio-items">
-      {% for i in portfolio %}
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ i.portfolio_image.url }}" title="{{ i.portfolio_description }}" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>{{ i.portfolio_title }}</h4>
-              </div>
-              <img src=" {{ i.portfolio_image.url }} " class="img-responsive" alt="Project Title"> </a> </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Bassel Allam</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
             </div>
-          </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-</div>
-{% comment %} <!-- Testimonial Section -->
-<div id= "testimonials">
-  <div class="container">
-    <div class="section-title text-center center">
-      <br> </br>
-      <h2>Testimonials</h2>
-      <hr>
-    </div>
-    <div>
-      <ul class="testimonial-row">
-        {% for i in count %}
-        <li>
-          <div class="review-border-box">
-              <div class="review-cart">
-                  <div class="review-text-head">
-                       the best instructor i have ever met, i was need a monitor who's can help me achive my
-                       career goals and he provided all things needed and was helpful
-                  </div>
-                  <h3> Client Name </h3>
-                  <h4> ⭐️⭐️⭐️⭐️⭐️ </h4>
-              </div>
-          </div>
-      </li>
-      {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div> {% endcomment %}
-<!-- Gallery Section -->
-<div id="gallery">
-  <div class="container">
-    <div class="section-title text-center center">
-      <br></br>
-      <h2>Gallery</h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div>
-      {% for i in gallery %}
-        <div class="col-sm-6 col-md-3 col-lg-3 graphic">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="{{ i.image.url }}" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>With heros</h4>
-              </div>
-              <img src="{{ i.image.url }}" class="img-responsive"> </a> </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-<!-- Contact Section -->
-<div id="contact" class="text-center">
-  <div class="container">
-    <div class="section-title center">
-      <h2>Get In Touch</h2>
-      <hr>
-    </div>
-    <div class="col-md-8 col-md-offset-2">
-    <div class="contact-box">
-      <ul>
-        <li class="contact-li">
-          <i class="material-icons" style="color:#555">location_on</i>
-          <h4> Sheraton Helipolis, Cairo, Egypt </h4>
-        </li>
-        <li class="contact-li">
-          <i class="material-icons" style="color:#555">phone</i>
-          <h4> +20 1091674497 </h4>
-        </li>
-        <li class="contact-li">
-          <i class="material-icons" style="color:#555">email</i>
-          <h4> info@basselallam.com </h4>
-        </li>
-      </ul>
-    </div>
-      <form name="sentMessage" id="contactForm" novalidate>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
-              <p class="help-block text-danger"></p>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">Bassel Allam</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#team" class="nav-item nav-link">Courses</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
-              <p class="help-block text-danger"></p>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3">Bassel Allam</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Tech Lead, Software Instructor, 5+ Years Experience in, Python Django Flutter, Helping Developers Build Skills, & Businesses Thrive</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <a href="#contact" class="btn btn-primary py-3 px-4 me-5">Contact me</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/JWXNyI1uLp4?si=D0FI3-BVNLYqUHzV" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="{% static 'img/profile.png'%}" alt="", height="50%">
+                </div>
             </div>
-          </div>
         </div>
-        <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-          <p class="help-block text-danger"></p>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-default btn-lg">Send Message</button>
-      </form>
-      <div class="social">
-        <ul>
-          <li><a href="https://github.com/BaselAllam"><i class="fa fa-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/bassel-allam-012b65b3/"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="https://www.youtube.com/@bassel_allam"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-      </div>
     </div>
-  </div>
-</div>
-<div id="footer">
-  <div class="container text-center">
-    <div class="fnav">
-      <p>Copyright &copy; <a href="http://www.basselallam.com" rel="nofollow">Bassel Allam</a>  All Rights Reserved. TAX-NO: 694-357-944</p>
+    <!-- Video Modal End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">5+</h1>
+                            <h5 class="mb-0">Years</h5>
+                        </div>
+                        <h3 class="lh-base mb-0">of working experience as a Tech Lead & Instructor</h3>
+                    </div>
+                    <p class="mb-4">Tech Lead | Software Instructor | 5+ Years Experience in Python, Django, Flutter & More | Helping Developers Build Skills & Businesses Thrive.</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="https://www.linkedin.com/in/bassel-allam-012b65b3/">LinkedIn</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="{% static 'img/about-1.jpg'%}" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="{% static 'img/about-2.jpg'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">55</h2>
+                    </div>
+                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">70</h2>
+                    </div>
+                    <p class="mb-0">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam amet diam ipsum clita labore dolor duo clita.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/nivo-lightbox.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/jquery.isotope.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/contact_me.js' %}"></script> 
-<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    <!-- About End -->
+
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
+                    <h3 class="mb-4">My Skills</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Web Dev</h6>
+                                    <h6 class="font-weight-bold">85%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Mobile Dev</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">eCommerce</h6>
+                                    <h6 class="font-weight-bold">95%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">SAAS</h6>
+                                    <h6 class="font-weight-bold">75%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Project Managment</h6>
+                                    <h6 class="font-weight-bold">90%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Mentroship</h6>
+                                    <h6 class="font-weight-bold">97%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="#contact">Contact Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Dev</h4>
+                            <h6 class="mb-3">Build <span class="text-primary">Native</span> Code</h6>
+                            <span>I provide professional web development services, creating modern, user-friendly, and scalable websites tailored to your needs.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-mobile fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Mobile Dev</h4>
+                            <h6 class="mb-3">Build <span class="text-primary">Crossplatform</span> Apps</h6>
+                            <span>I provide mobile development services, crafting modern, user-friendly, and scalable apps to meet your needs.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-store fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">eCommerce</h4>
+                            <h6 class="mb-3">for <span class="text-primary">Businesses</span> Needs</h6>
+                            <span>I offer ecommerce development services, creating modern, secure, and user-friendly online stores to help grow your business.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-book fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Mentroship</h4>
+                            <h6 class="mb-3">in <span class="text-primary">Software</span> fields</h6>
+                            <span>I offer mentorship services to guide and support you in achieving your career and learning goals, providing personalized advice and practical insights.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Portfolio</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All Projects</li>
+                        <li class="mx-3" data-filter=".first">Web & Mobile</li>
+                        <li class="mx-3" data-filter=".second">Teaching</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/project-1.jpg'%}" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-1.jpg'%}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/project-2.jpg'%}" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-2.jpg'%}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/project-3.jpg'%}" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-3.jpg'%}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/project-4.jpg'%}" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-4.jpg'%}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/project-5.jpg'%}" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-5.jpg'%}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/project-6.jpg'%}" alt="">
+                        <div class="portfolio-btn">
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="{% static 'img/project-6.jpg'%}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-6 pb-5" id="team">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Upcoming Rounds</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Book Now</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="{% static 'img/team-1.jpg'%}" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Flutter</h5>
+                                <span>Mobile Dev using</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="{% static 'img/team-2.jpg'%}" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Full Stack</h5>
+                                <span>Web Dev</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="{% static 'img/team-3.jpg'%}" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>Python</h5>
+                                <span>Programming</span>
+                            </div>
+                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/testimonial-1.jpg'%}" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/testimonial-2.jpg'%}" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/testimonial-3.jpg'%}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{% static 'img/testimonial-1.jpg'%}" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{% static 'img/testimonial-2.jpg'%}" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{% static 'img/testimonial-3.jpg'%}" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/testimonial-1.jpg'%}" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/testimonial-2.jpg'%}" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/testimonial-3.jpg'%}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Contact Now</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">My office:</p>
+                    <h3 class="fw-bold">Shorok City, Cairo, EG</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+2010 9167 4497</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">info@basselallam.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/eng.basselallam/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/eng.basselallam"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.youtube.com/@bassel_allam"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/bassel-allam-012b65b3/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://github.com/BaselAllam/"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="mb-4">Let me know what service you’re looking for and share a bit about your project—just fill out the form, and I’ll get back to you ASAP! 😊.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="number" placeholder="Your Phone Number">
+                                    <label for="phone">Your Number</label>
+                                </div>
+                            </div>
+                            <label for="service">Choose a service:</label>
+                            <select id="service" name="service">
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-development">Mobile Development</option>
+                            <option value="ecommerce">Ecommerce</option>
+                            <option value="mentorship">Mentorship</option>
+                            <option value="other">Other</option>
+                            </select>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Map Start -->
+    <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-xxl pt-5 px-0">
+            <div class="bg-dark">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55192.105417961786!2d31.593267026076088!3d30.1655197705641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457f7d7c85c1e63%3A0xa16c80a505d27145!2sAl%20Shorouk%20City%2C%20El%20Shorouk%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sbd!4v1732118800238!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- Map End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-secondary" href="https://basselallam.com">Bassel Allam</a>, All Right Reserved TAX-NO: 694-357-944.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js'%}"></script>
+    <script src="{% static 'lib/easing/easing.min.js'%}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js'%}"></script>
+    <script src="{% static 'lib/typed/typed.min.js'%}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js'%}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'lib/isotope/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js'%}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js'%}"></script>
 </body>
+
 </html>
