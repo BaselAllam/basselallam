@@ -393,42 +393,20 @@
                 </div>
             </div>
             <div class="row g-4">
+                {% for i in courses %}
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="{% static 'img/team-1.jpg'%}" alt="">
+                        <img class="img-fluid rounded" src="{{ i.course_image.url }}" alt="">
                         <div class="team-text bg-white rounded-end p-4">
                             <div>
-                                <h5>Flutter</h5>
-                                <span>Mobile Dev using</span>
+                                <h5>{{ i.course_category }}</h5>
+                                <span>{{ i.course_hours }} Hours | {{ i.course_price }}{{ i.course_price_currency }}</span>
                             </div>
-                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
+                            <a href='https://wa.me/+201091674497'> <i class="fa fa-arrow-right fa-2x text-primary"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="{% static 'img/team-2.jpg'%}" alt="">
-                        <div class="team-text bg-white rounded-end p-4">
-                            <div>
-                                <h5>Full Stack</h5>
-                                <span>Web Dev</span>
-                            </div>
-                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative">
-                        <img class="img-fluid rounded" src="{% static 'img/team-3.jpg'%}" alt="">
-                        <div class="team-text bg-white rounded-end p-4">
-                            <div>
-                                <h5>Python</h5>
-                                <span>Programming</span>
-                            </div>
-                            <i class="fa fa-arrow-right fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -440,58 +418,22 @@
         <div class="container-fluid py-5">
             <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
             <div class="row justify-content-center">
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="testimonial-left h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/testimonial-1.jpg'%}" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/testimonial-2.jpg'%}" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/testimonial-3.jpg'%}" alt="">
-                    </div>
-                </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel">
+                        {% for i in reviews %}
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{% static 'img/testimonial-1.jpg'%}" alt="">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{{ i.client_image.url }}" alt="">
                                 <div class="testimonial-icon">
                                     <i class="fa fa-quote-left text-primary"></i>
                                 </div>
                             </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <p class="fs-5 fst-italic">{{ i.client_review }}.</p>
                             <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
+                            <h5>{{ i.client_name }}</h5>
+                            <span>{{ i.client_rate }}⭐</span>
                         </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{% static 'img/testimonial-2.jpg'%}" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="testimonial-item text-center">
-                            <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="{% static 'img/testimonial-3.jpg'%}" alt="">
-                                <div class="testimonial-icon">
-                                    <i class="fa fa-quote-left text-primary"></i>
-                                </div>
-                            </div>
-                            <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <hr class="w-25 mx-auto">
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-none d-lg-block">
-                    <div class="testimonial-right h-100">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="{% static 'img/testimonial-1.jpg'%}" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="{% static 'img/testimonial-2.jpg'%}" alt="">
-                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="{% static 'img/testimonial-3.jpg'%}" alt="">
+                        {% endfor %}
                     </div>
                 </div>
             </div>

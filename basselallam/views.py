@@ -15,5 +15,4 @@ def home_view(request):
     data['reviews'] = reviews
     courses = Courses.objects.filter(is_archived = False)
     data['courses'] = courses
-    data['count'] = [10, 20, 30, 40, 50]
     return render(request, 'index.html', context= data)
