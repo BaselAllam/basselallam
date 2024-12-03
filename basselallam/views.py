@@ -3,7 +3,7 @@ from gallery.models import Gallery
 from portfolio.models import Portfolio
 from reviews.models import Reviews
 from courses.models import Courses
-
+from blogs.models import Blogs
 
 def home_view(request):
     data = {}
@@ -15,4 +15,6 @@ def home_view(request):
     data['reviews'] = reviews
     courses = Courses.objects.filter(is_archived = False)
     data['courses'] = courses
+    blogs = Blogs.objects.filter(is_archived = False)
+    data['blogs'] = blogs
     return render(request, 'index.html', context= data)

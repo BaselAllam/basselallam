@@ -63,7 +63,8 @@
             </a>
             <div class="navbar-nav me-auto py-0">
                 <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#team" class="nav-item nav-link">Courses</a>
+                <a href="#course" class="nav-item nav-link">Courses</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
                 <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
@@ -349,8 +350,8 @@
     <!-- Projects End -->
 
 
-    <!-- Team Start -->
-    <div class="container-xxl py-6 pb-5" id="team">
+    <!-- Course Start -->
+    <div class="container-xxl py-6 pb-5" id="course">
         <div class="container">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
@@ -379,7 +380,39 @@
             </div>
         </div>
     </div>
-    <!-- Team End -->
+    <!-- Course End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-xxl py-6 pb-5" id="blog">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Blog</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Read More</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                {% for i in blogs %}
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <img class="img-fluid rounded" src="{{ i.blog_image.url }}" alt="">
+                        <div class="team-text bg-white rounded-end p-4">
+                            <div>
+                                <h5>{{ i.blog_title }}</h5>
+                                <span>{{ i.views }} Views | {{ i.created_at }}</span>
+                            </div>
+                            <a href=''> <i class="fa fa-arrow-right fa-2x text-primary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
 
 
     <!-- Testimonial Start -->
@@ -443,48 +476,6 @@
                         <a class="btn btn-square btn-primary me-2" href="https://github.com/BaselAllam/"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                {% comment %} <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4">Let me know what service you’re looking for and share a bit about your project—just fill out the form, and I’ll get back to you ASAP! 😊.</p>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="number" placeholder="Your Phone Number">
-                                    <label for="phone">Your Number</label>
-                                </div>
-                            </div>
-                            <label for="service">Choose a service:</label>
-                            <select id="service" name="service">
-                            <option value="web-development">Web Development</option>
-                            <option value="mobile-development">Mobile Development</option>
-                            <option value="ecommerce">Ecommerce</option>
-                            <option value="mentorship">Mentorship</option>
-                            <option value="other">Other</option>
-                            </select>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div> {% endcomment %}
             </div>
         </div>
     </div>

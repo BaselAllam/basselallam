@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['basselallam.com', 'www.basselallam.com']
 INSTALLED_APPS = [
     # Apps
     'portfolio.apps.PortfolioConfig',
+    'blogs.apps.BlogsConfig',
     'courses.apps.CoursesConfig',
     'gallery.apps.GalleryConfig',
     'reviews.apps.ReviewsConfig',
