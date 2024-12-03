@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'courses.apps.CoursesConfig',
     'gallery.apps.GalleryConfig',
-    'contactme.apps.ContactmeConfig',
     'reviews.apps.ReviewsConfig',
     'users.apps.UsersConfig',
     'certificate.apps.CertificateConfig',
